@@ -1,3 +1,26 @@
+<?php
+
+include "../infra/conexao.php";
+
+$id = $_GET["id"] ?? "";
+
+if (!filter_var($id, FILTER_VALIDATE_INT)) {
+    die("ID do brinquedo inválido.");
+}
+
+$sql = "SELECT * FROM brinquedos WHERE id = ?";
+$comando = $conexao->prepare($sql);
+$comando->bind_param("i", $id);
+$comando->execute();
+
+$resultado = $comando->get_result();
+$brinquedo = $resultado->fetch_assoc();
+
+if (!$brinquedo) {
+    die("Brinquedo não encontrado.");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
