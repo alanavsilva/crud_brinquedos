@@ -50,7 +50,7 @@
             <th>Quantidade</th>
             <th>Ações</th>
         </tr>
-          <?php while ($brinquedo = $brinquedos->fetch_assoc()) { ?>
+            <?php while ($brinquedo = $brinquedos->fetch_assoc()) { ?>
                     <tr>
                         <td><?php echo $brinquedo["id"]; ?></td>
                         <td><?php echo $brinquedo["nome"]; ?></td>
@@ -58,9 +58,19 @@
                         <td><?php echo $brinquedo["faixa_etaria"]; ?></td>
                         <td><?php echo $brinquedo["preco"]; ?></td>
                         <td><?php echo $brinquedo["quantidade_estoque"]; ?></td>
+                        <td>
+                            <a href="public/editar_brinquedo.php?id=<?php echo $brinquedo["id"]; ?>">
+                                Editar
+                            </a>
+                            
+                            <a href="public/excluir_brinquedo.php?id=<?php echo $brinquedo["id"]; ?>">
+                                Excluir
+                            </a>
+                        </td>
+                    </tr>
             <?php } ?>
-        </tr>
     </table>
+        </div>
 </main>
             </body>
 </html>
