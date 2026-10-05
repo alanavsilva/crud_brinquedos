@@ -1,17 +1,15 @@
 # Sistema de Gestão de Brinquedos
 
-Projeto desenvolvido para a atividade de recuperação de CRUD em PHP e MySQL.
+Projeto desenvolvido para a atividade de recuperação de CRUD em PHP e MySQL. O sistema permite cadastrar, listar, editar e excluir brinquedos. Cada brinquedo possui nome, categoria, faixa etária, preço e quantidade em estoque.
 
-O sistema permite cadastrar, listar, editar e excluir brinquedos. Cada brinquedo possui nome, categoria, faixa etária, preço e quantidade em estoque.
-
-## Tecnologias
+## Tecnologias 
 
 - HTML
 - PHP
 - MySQL
 - Prepared Statements
 
-## Estrutura do projeto
+## Estrtura do projeto
 
 recuperacao/
 - database/
