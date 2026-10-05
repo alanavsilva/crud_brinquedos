@@ -1,3 +1,14 @@
+<?php
+
+include "infra/conexao.php";
+
+$sql = "SELECT * FROM brinquedos";
+$comando = $conexao->prepare($sql);
+$comando->execute();
+$brinquedos = $comando->get_result();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
